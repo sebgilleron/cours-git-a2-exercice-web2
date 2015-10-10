@@ -51,7 +51,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset ($_POST['username'
         $db = db;
         $username = $_POST['username'];
         $email = $_POST['email'];
-        $password = $_POST['password';
+        $password = $_POST['password'];
         
 		userRegistration($db, $username, $email, $password);
 		header('Location: login.php');
