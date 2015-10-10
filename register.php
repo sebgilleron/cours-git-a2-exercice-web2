@@ -48,10 +48,8 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset ($_POST['username'
 			$password -> 		field value : password
 		*/
         
-        $db = db;
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        
+        
         
 		userRegistration($db, $username, $email, $password);
 		header('Location: login.php');
