@@ -12,7 +12,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) && isset ($_POST['username'
     
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password';
+    $password = $_POST['password'];
 	/* isEmailAvailable
 		return :
 			true if available
