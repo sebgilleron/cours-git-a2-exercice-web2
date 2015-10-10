@@ -17,7 +17,7 @@ if (isset($_POST['email']) && !empty($_POST['email'])
 	$password = $_POST['password'];
 	$email = $_POST['email'];
 
-	userConnection($db, $email, $password,);
+	userConnection($db, $email, $password);
 	
 	header('Location: dashboard.php');
 
@@ -31,7 +31,7 @@ if (isset($_POST['email']) && !empty($_POST['email'])
 	}
 
 	
-}
+
 
 /******************************** 
 			VIEW 
