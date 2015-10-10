@@ -11,19 +11,26 @@ require('model/functions.fn.php');
 			PROCESS
 ********************************/
 
-if (isset($_POST) && !empty($_POST)) {
+if (isset($_POST['email']) && !empty($_POST['email']) 
+	&& isset($_POST['password']) && !empty($_POST['password'])) {
 	
-	/*userConnection
-		return :
-			true for connection OK
-			false for fail
-		$db -> 				database object
-		$email -> 			field value : email
-		$password -> 		field value : password
-	*/
-	userConnection($db, 'git@initiation.com', 'password');
+	$password = $_POST['password'];
+	$email = $_POST['email'];
+
+	userConnection($db, $email, $password,);
 	
 	header('Location: dashboard.php');
+
+	if(userConnection($db, $email, $password)) {
+		header('Location:dashboard.php');
+		}else{
+			$error= "Mauvais identifiants";
+		}
+
+
+	}
+
+	
 }
 
 /******************************** 
